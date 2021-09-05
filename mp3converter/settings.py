@@ -22,7 +22,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'herokuapp',
 ]
-ALLOWED_HOSTS = ['mp3-converter-downloader.herokuapp.com/']
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -36,7 +36,7 @@ SECRET_KEY = '*rbkhk(m0_e&z8dkpt1*j4o6vp&e=63t_l7_r48u7qaou0yt!i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','mp3-converter-downloader.herokuapp.com']
 
 
 # Application definition
