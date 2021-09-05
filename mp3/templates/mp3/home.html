@@ -1,0 +1,189 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP3 İndirme</title>
+<style>
+    body{
+    background-image: url("{%static 'mp3/images/music.jpg'%}");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+    	/** Side Tab Sticky Button **/
+#side-sticky-tab {
+  position: fixed;
+  top: 25vh;
+  right: 50px;
+  z-index: 999;
+	
+}
+#side-sticky-tab div {
+  margin: 0;
+  padding: 0;
+}
+#side-sticky-tab .sticky-container {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-box-shadow: -10px 0 25px -1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: -10px 0 25px -1px rgba(0, 0, 0, 0.05);
+  box-shadow: -10px 0 25px -1px rgba(0, 0, 0, 0.25);
+  border-radius: 12px 12px 0 0;
+  right: -255px;
+  top: 15vh;
+  position: fixed;
+  transition-property: right;
+  transition-duration: 0.6s;
+}
+#side-sticky-tab .sticky-container:hover {
+  right: 0;
+}
+#side-sticky-tab .callout {
+  position: relative;
+  display: block;
+  border-radius: 6px 6px 0 0;
+}
+#side-sticky-tab .slideout {
+
+  position: relative;
+  vertical-align: middle;
+  height: 275px;
+  display: block;
+  background-color: #FFFFFF;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  z-index: 999;
+}
+#side-sticky-tab .slideout .inner {
+  padding-top: 2%;
+  padding-bottom: 16%;
+  text-align: center;
+}
+#side-sticky-tab .callout a {
+  color: #171516;
+  background-color: #FFFFFF;
+  height: 40px;
+  width: 275px;
+  margin: 0;
+  padding: 0;
+  z-index: 9999;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: 600;
+  border-radius: 6px 6px 0 0;
+  text-decoration: none;
+}
+#side-sticky-tab a:hover {
+}
+.support {
+  
+}
+.inner {
+  background-color: #FFFFFF;
+  height: 187px;
+}
+.inner img {
+  
+}
+
+.form{
+    left      : 50%;
+    top       : 50%;
+    position  : absolute;
+    transform : translate(-50%, -50%)
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button[type=submit] {
+    width: 100%;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;  
+  background-color: #64d868;
+}
+button[type=submit]:hover {
+    width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;  
+}
+
+
+
+</style>
+</head>
+<body>
+   
+    <form method="POST" action="" name="form" id="form" class="form"> 
+        {%csrf_token%}
+        <h1 style="color:white">Mp3 Dönüştürücü/İndirici</h1>
+        <label style="color: white;" for="">Yol:</label>
+        <input type="text" name="path" id="path" placeholder="C:/Users/Computer/Desktop/Şarkılar"> 
+        <br>
+        <label style="color: white;" for="">Link:</label>
+        <input type="text" name="name" id="name" placeholder="https://www.youtube.com/watch?v=TAWDku85xMo"> 
+        <br>
+        <button type="submit" name="submit" id="submit" value="submit">İndir</button>
+    </form> 
+    <div id="side-sticky-tab">
+        <div>
+          <div class="textwidget">
+            <div class="sticky-container">
+              <div class="callout">
+                <a class="support" href="#">Follow me on Github  <img src="{%static 'mp3/images/GitHub.png'%}" height="33px;"width="33px;"></a>
+              </div>
+              <div class="slideout">
+                <div class="inner col">
+                    <div class="row" style="margin-left:50px;"><a href="https://github.com/harunkara"><img   style="border-radius:50%;"src="https://avatars.githubusercontent.com/u/45212127?s=400&v=4" height="200px"width="200px" alt="harun" /> <h5 style="margin-top:0px;">
+                        @harunkara
+                        </h5></a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+</body>
+</html>
+
+    
